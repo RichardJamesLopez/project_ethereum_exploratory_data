@@ -341,7 +341,8 @@ These charts are fewer but required considerable amount of time to decompose. Th
 
 ### Block\_Size &lt;&gt; Day of the Week
 
-The variable "Day" is unique to this dataset as most asset classes do not trade on the weekend. Ether does and so it is worth seeing how much it is traded on individual days. ![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Bivariate_Plots_V5-1.png)
+The variable "Day" is unique to this dataset as most asset classes do not trade on the weekend. Ether does and so it is worth seeing how much it is traded on individual days. 
+![](/Bivariate_Plots_V5-1.png)
 
 The alpha parameter here is set to 1/5 meaning, there is a distinct blue dot when 5 observations overlap. This is meant to contrast how frequent there are low transactions days vs. high transactions days. However, there is not a compelling difference between the days of the weeks and so a box plot may illustrate differently.
 
