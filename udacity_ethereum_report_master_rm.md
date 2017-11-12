@@ -97,7 +97,7 @@ As a starting point, the variable "Block\_Size" is a good variable to examine. O
 
 To start visualizing the data, a variable "Block\_Size" is able to shine some light on how distributions may exist in the data.
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Univariate_Plots_V1-1.png)
+![](/Univariate_Plots_V1-1.png)
 
 ### Block\_Size Histogram V2
 
