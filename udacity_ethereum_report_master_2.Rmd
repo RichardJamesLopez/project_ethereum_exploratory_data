@@ -27,7 +27,7 @@ library(anytime)
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, setup}
 
-# setwd('/Users/RichardJamesLopez/Dropbox/udacity_ethereum_data-master')
+# setwd('/data_files')
 
 ```
 
