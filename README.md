@@ -1,4 +1,4 @@
-<U>Ethereum Historical Data by Richard James Lopez</U>
+<U>Ether Historical Data by Richard James Lopez</U>
 ======================================================
 
 Project Details
@@ -103,7 +103,7 @@ To start visualizing the data, a variable "Block\_Size" is able to shine some li
 
 By halving the bidwidth to 250 there is a more nuanced view that decouples some of those lesser Block Size values. This is evident by the two horned values at the start of the chart to the left.
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Univariate_Plots_V2-1.png)
+![](/figure-markdown_github/Univariate_Plots_V2-1.png)
 
 ### Univariate\_Plots\_Transactions
 
@@ -111,7 +111,7 @@ To test the intuition behind these variables, a histogram with Transactions inst
 
     ## Warning: Removed 1 rows containing missing values (geom_bar).
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Univariate_Plots_V4-1.png)
+![](/figure-markdown_github/Univariate_Plots_V4-1.png)
 
 The chart does appear to have a similar distribution, but it is hardly exact. This could be due to fewer but large transactions still being about to create a large Block. There will be more analysis with Block\_Size and Transactions in more of the Bivariate and Multivariate charts too.
 
@@ -121,7 +121,7 @@ The Block\_Size also seems to have a tail of large Block Size values with occurr
 
     ## Warning: Removed 84 rows containing non-finite values (stat_bin).
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Univariate_Plots_V3-1.png)
+![](/figure-markdown_github/Univariate_Plots_V3-1.png)
 
 This range of values, changes the distribution slightly (keeping binwidth of 250), and the left peak that existed earlier in chart Block\_Size Histogram V2, but there is still the lingering values of big block sizes that exist on the right side of the chart.
 
@@ -196,13 +196,13 @@ To start out examing variables, a ggppairs chart may give some initial ideas for
     ## [1] "Unix_Time_Stamp" "Transactions"    "Block_Size"      "Price_Change"   
     ## [5] "Supply"          "Hashrate"
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Bivariate_Plots_Summary-1.png)
+![](/figure-markdown_github/Bivariate_Plots_Summary-1.png)
 
 ### Block\_Size \<\> Hashrate
 
 Based on the Correlation charts above, there is a strong (0.964) correlation coefficient between the Block\_Size and Hashrate. This makes sense technologically as more hashes would create a larger block. However, the technology for writing hashes has changed over the course of this time series. Visualizing the relastionship can show the story the correlation coefficient is telling.
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Bivariate_Plots_V2-1.png)
+![](/figure-markdown_github/Bivariate_Plots_V2-1.png)
 
 The above chart to the left is interesting because there seems to be two data regimes.
 
@@ -210,7 +210,7 @@ A block size of up until 5000 appears to have tight positive correlation to hash
 
 From this chart, maybe the Block\_Size is not the main departure of behavior. Perhaps it has to do with blocks that have a hashrate of less than 10,000
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Bivariate_Plots_Hashrate-1.png)
+![](/figure-markdown_github/Bivariate_Plots_Hashrate-1.png)
 
 This visualization shows that for small relative Block Sizes, hashrate is uncorrelated. There is a range of a hashrate of 0 to 10000. This may be due to upgraded technological protocol, the decreasing size of transaction value that may affect the hashrate, or just hard to scale block size as it get larger. This visualization begets new questions that weren't initially visible.
 
@@ -218,7 +218,7 @@ This visualization shows that for small relative Block Sizes, hashrate is uncorr
 
 Another similar relationship is that for Market Cap and Transactions. It stands to reason that as the Market Cap increases, there will be more liquiditiy (Transactions per day as a proxy).
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Bivariate_Plots_V3-1.png)
+![](/figure-markdown_github/Bivariate_Plots_V3-1.png)
 
 Just as the Hashrates are increasing helping prove the Block\_Size robust, the Market Cap increases proves that Transactions will probably be more frequent. While not neceessarily true (you can have a large Market Cap with just a handful of Ether holders who do not making regular transactions), this chart appears to resemble that of the Block\_Size \<\> Hashrate chart.
 
@@ -226,11 +226,11 @@ Just as the Hashrates are increasing helping prove the Block\_Size robust, the M
 
 One of the more vanilla relationships will be to examine Price behavior.
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Bivariate_Plots_V1-1.png)
+![](/figure-markdown_github/Bivariate_Plots_V1-1.png)
 
 The price above shows the linear modeling of the Price which is generally not recommended for asset price. The plot below models regular behavior for asset prices by making sure to take the log10 value of the price (+1).
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Bivariate_Plots_Price_Updated-1.png)
+![](/figure-markdown_github/Bivariate_Plots_Price_Updated-1.png)
 
 ### Price\_Change \<\> Transactions
 
@@ -281,7 +281,7 @@ These charts seems to frame a cluster of data points between in single digits Pr
 
     ## Warning: Removed 82 rows containing missing values (geom_point).
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Bivariate_Plots_V4_Trimmed-1.png)
+![](/figure-markdown_github/Bivariate_Plots_V4_Trimmed-1.png)
 
 Within this range, I see that a majority of the data points less than +/- 10% (Note: 82 observations were removed from the dataset when the tails of the distribution were filtered out). The pattern that stands out though is how there a loose cluster of data points with high \# of transactions that exists over a gap above a tighter cluster of low \# of transactions. There could be several explanations for this. My intuition is that there is a significant uptick of transactions along our time series data. There is probably two difficult time periods to these data points.
 
@@ -292,7 +292,7 @@ ggplot(data = all_data, aes(x = Unix_Time_Stamp, y = Transactions)) +
   geom_line(color = 'green') 
 ```
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Bivariate_Plots_Transaction_Time_Series-1.png)
+![](/figure-markdown_github/Bivariate_Plots_Transaction_Time_Series-1.png)
 
 I contemplated cherrypicking what would be a good cutoff point. However for future rendering of this data, I simply decided to choose the middle point of the time series and approximately slice the data into two halves.
 
@@ -308,7 +308,7 @@ all_data_Transactions_2nd <- subset(all_data_post_zero, Unix_Time_Stamp > 1.474e
 
 Now, let me create new charts with these two subsets.
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Bivariate_Plots_Transaction_Time_Series_V2-1.png)
+![](/figure-markdown_github/Bivariate_Plots_Transaction_Time_Series_V2-1.png)
 
 Based on these charts above, one can observe that the scale of transaction numbers is bigger for the 2nd half of the history. However, there appears to be a similar pattern of transactions to price change. While it would be fruitful to examine the periods, no divergent patterns jump off the pageat first glance.
 
@@ -347,7 +347,7 @@ The alpha parameter here is set to 1/5 meaning, there is a distinct blue dot whe
 
 This chart simplifies the relationship by removing the Block Size variable and focusing on Transactions.
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Transaction_DaysofWeek-1.png)
+![](/figure-markdown_github/Transaction_DaysofWeek-1.png)
 
 This plot further corroborates 2 things \> 1) the 75th quantile is lowest for Saturday and Sunday, and \> 2) the highest amount of transactions for both Saturday and Sunday are lower than the highest amount of transactions for all the other day of the weeks.
 
@@ -357,13 +357,13 @@ We can make other observations about the busiest days being Thursday and Friday 
 
 Another factor that may affect volatility is the ability to fulfill a block. To test under what Block creation factors cause the greated rise and fall in price, one canadd a color scale to both the Block Size and Block Difficult variables,. One may seem visible differences a 3rd variable - Price Change in this case. Continuing the subset work done earlier, the first charts start off with the most recent time period (the second half of the non-zero Price time series) and made 2 charts. The one with the green highlights the conditions under which the biggest positive Price\_Changes were. The one with red highlights the biggest negative Price\_Changes.
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Multivariate_Plots_Transcations_2nd-1.png)
+![](/figure-markdown_github/Multivariate_Plots_Transcations_2nd-1.png)
 
 The charts above do not appear to support the thesis that the Price Changes will be muted if there is more activity on the block chain. The darker red data points can be found along the spectrum. It is hard to discern a clear signal fromt his chart.
 
 Below is the same analysis with the original data set from the 1st half of transactions.
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Multivariate_Plots_Transcations_1st-1.png)
+![](/figure-markdown_github/Multivariate_Plots_Transcations_1st-1.png)
 
 This chart above gives the same mixed message about Price Changes based on anytime of Block chain dynamics.
 
@@ -404,7 +404,7 @@ The plots below are 3 of the most interesting as part of the anlaysis. In additi
 
     ## Warning: Removed 82 rows containing missing values (geom_point).
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Bivariate_Plots_V4_Final-1.png)
+![](/figure-markdown_github/Bivariate_Plots_V4_Final-1.png)
 
 ### Description One
 
@@ -412,11 +412,11 @@ The plots below are 3 of the most interesting as part of the anlaysis. In additi
 
 > The chart below actually corroborates that when the Market Cap went from approximately 10,000 to 15,000, there were only a week or two of observations. It took time to arrive at this conclusion, but the visuzataions helped framed the thought process.
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Bivariate_Plots_V3_Final-1.png)
+![](/figure-markdown_github/Bivariate_Plots_V3_Final-1.png)
 
 ### Plot Two - Transactions \<\> Day of the Week
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Transaction_DaysofWeek_Final-1.png)
+![](/figure-markdown_github/Transaction_DaysofWeek_Final-1.png)
 
 ### Description Two
 
@@ -424,7 +424,7 @@ The plots below are 3 of the most interesting as part of the anlaysis. In additi
 
 ### Plot Three - Price\_Change \<\> Block Factors
 
-![](udacity_ethereum_report_master_rm_files/figure-markdown_github/Multivariate_Plots_Transcations_2nd_Final-1.png)
+![](/figure-markdown_github/Multivariate_Plots_Transcations_2nd_Final-1.png)
 
 ### Description Three
 
