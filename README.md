@@ -127,7 +127,7 @@ The chart does appear to have a similar distribution, but it is hardly exact. Th
 
 The Block\_Size also seems to have a tail of large Block Size values with occurring less frequently. By cutting off 5% of each tail, a new picture could emerge. This trimming removed 84 of the rows containing the smallest and largest BlockSizes values.
 
-![](/project_ethereum_exploratory_data-master/figure-markdown_github/univariate_plots_v3-1.png)
+![](/figure-markdown_github/univariate_plots_v3-1.png)
 
 This range of values, changes the distribution slightly (keeping binwidth of 250), and the left peak that existed earlier in chart Block\_Size Histogram V2, but there is still the lingering values of big block sizes that exist on the right side of the chart.
 
