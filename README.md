@@ -4,7 +4,7 @@
 Project Details
 ---------------
 
-This report details interesting explaratory data points for a Udacity Nanodegree for Data Analysis project. This is a perfect opportunity to explore data collected related to the cryptoassset Ether and it's blockchain of Ethereum.
+This report details interesting explaratory data points for a Udacity Nanodegree for Data Analysis project. This is a perfect opportunity to explore data collected related to the cryptoassset Ether and its blockchain of Ethereum.
 
 ### R libraries used
 
