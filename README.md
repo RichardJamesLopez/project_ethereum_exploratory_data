@@ -104,7 +104,7 @@ For a less formal view of the variable, here are a set of definitions to describ
 
 The simplicity of univariate charts is to help us identify general ideas about variables. Running a set of histograms is a first step in examining the distribution, spotting outliers and making changes to the dataset before starting the analysis.
 
-![](/udacity_ethereum_report_master_2.pdf)
+![](udacity_ethereum_report_master_2_files/figure-markdown_github/allvariables-1.png)
 
 Based on the charts above, the variable "Block\_Size" is convenient to examine. Of all the variables, there are the fewer preconceived notions about it given that is a fairly obscure measurement. It also appears to be extremely skewed to the left. Bringing up a summary of the stats is in order.
 
