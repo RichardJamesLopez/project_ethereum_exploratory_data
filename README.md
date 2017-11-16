@@ -119,7 +119,7 @@ Digging further into the distribution allows us to shine light on how the 4th qu
 
 By halving the binwidth to 250 there is a more nuanced view that decouples some of those lesser Block Size values. This is evident by the two horned values at the start of the chart to the left.
 
-![](udacity_ethereum_report_master_2_files/figure-markdown_github/univariate_plots_v2-1.png)
+![](uproject_ethereum_exploratory_data/figure-markdown_github/univariate_plots_v2-1.png)
 
 ### Univariate\_Plots\_Transactions
 
