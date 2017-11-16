@@ -115,11 +115,11 @@ Based on the charts above, the variable "Block\_Size" is convenient to examine. 
 
 Digging further into the distribution allows us to shine light on how the 4th quartile appears to be so far from the 1st.
 
-![](udacity_ethereum_report_master_2_files/figure-markdown_github/univariate_plots_v1-1.png)
+![](.project_ethereum_exploratory_data/figure-markdown_github/univariate_plots_v1-1.png)
 
 By halving the binwidth to 250 there is a more nuanced view that decouples some of those lesser Block Size values. This is evident by the two horned values at the start of the chart to the left.
 
-![univariate_plots_v2-1.png](project_ethereum_exploratory_data/figure-markdown_github/univariate_plots_v2-1.png)
+![](.project_ethereum_exploratory_data/figure-markdown_github/univariate_plots_v2-1.png)
 
 ### Univariate\_Plots\_Transactions
 
